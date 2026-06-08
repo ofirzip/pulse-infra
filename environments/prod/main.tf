@@ -38,3 +38,11 @@ module "firestore" {
   project_id  = var.project_id
   location_id = var.firestore_location
 }
+
+module "storage" {
+  source = "../../modules/storage"
+
+  project_id  = var.project_id
+  bucket_name = var.bucket_name
+  location    = "US"
+}

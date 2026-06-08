@@ -1,18 +1,22 @@
 variable "project_id" {
-  type = string
+  type        = string
+  description = "GCP project ID"
 }
 
 variable "topic_name" {
-  type    = string
-  default = "pulse-events"
+  type        = string
+  description = "Pub/Sub topic name"
+  default     = "pulse-events"
 }
 
 variable "subscription_name" {
-  type    = string
-  default = "pulse-events-sub"
+  type        = string
+  description = "Pub/Sub subscription name"
+  default     = "pulse-events-sub"
 }
 
 variable "ack_deadline_seconds" {
-  type    = number
-  default = 60
+  type        = number
+  description = "Acknowledgement deadline in seconds for the subscription"
+  default     = 60
 }

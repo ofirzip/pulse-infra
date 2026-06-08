@@ -22,3 +22,12 @@ module "pubsub" {
   topic_name        = var.topic_name
   subscription_name = var.subscription_name
 }
+
+module "bigquery" {
+  source = "../../modules/bigquery"
+
+  project_id = var.project_id
+  dataset_id = var.bq_dataset_id
+  table_id   = var.bq_table_id
+  location   = "US"
+}

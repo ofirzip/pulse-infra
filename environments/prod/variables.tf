@@ -10,31 +10,37 @@ variable "region" {
 }
 
 variable "topic_name" {
-  type    = string
-  default = "pulse-events"
+  type        = string
+  description = "Pub/Sub topic name"
+  default     = "pulse-events"
 }
 
 variable "subscription_name" {
-  type    = string
-  default = "pulse-events-sub"
+  type        = string
+  description = "Pub/Sub subscription name"
+  default     = "pulse-events-sub"
 }
 
 variable "bq_dataset_id" {
-  type    = string
-  default = "pulse_raw"
+  type        = string
+  description = "BigQuery dataset ID"
+  default     = "pulse_raw"
 }
 
 variable "bq_table_id" {
-  type    = string
-  default = "events"
+  type        = string
+  description = "BigQuery table ID"
+  default     = "events"
 }
 
 variable "bucket_name" {
-  type    = string
-  default = "pulse-analytics-reports"
+  type        = string
+  description = "GCS bucket name for reports"
+  default     = "pulse-analytics-reports"
 }
 
 variable "firestore_location" {
-  type    = string
-  default = "nam5"
+  type        = string
+  description = "Firestore database location (nam5 = US multi-region)"
+  default     = "nam5"
 }

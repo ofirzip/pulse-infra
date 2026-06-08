@@ -46,3 +46,13 @@ module "storage" {
   bucket_name = var.bucket_name
   location    = "US"
 }
+
+module "iam" {
+  source = "../../modules/iam"
+
+  project_id      = var.project_id
+  topic_id        = module.pubsub.topic_id
+  subscription_id = module.pubsub.subscription_id
+  dataset_id      = module.bigquery.dataset_id
+  bucket_name     = module.storage.bucket_name
+}

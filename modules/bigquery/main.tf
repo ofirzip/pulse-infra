@@ -20,10 +20,10 @@ resource "google_bigquery_table" "events" {
   deletion_protection = false
 
   schema = jsonencode([
-    { name = "event_type",  type = "STRING",    mode = "NULLABLE" },
-    { name = "user_id",     type = "STRING",    mode = "NULLABLE" },
+    { name = "event_type", type = "STRING", mode = "NULLABLE" },
+    { name = "user_id", type = "STRING", mode = "NULLABLE" },
     { name = "ingested_at", type = "TIMESTAMP", mode = "NULLABLE" },
-    { name = "session_id",  type = "STRING",    mode = "NULLABLE" },
-    { name = "properties",  type = "JSON",      mode = "NULLABLE" }
+    { name = "session_id", type = "STRING", mode = "NULLABLE" },
+    { name = "properties", type = "JSON", mode = "NULLABLE" }
   ])
 }

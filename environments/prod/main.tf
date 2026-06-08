@@ -14,3 +14,11 @@ provider "google" {
 }
 
 data "google_project" "current" {}
+
+module "pubsub" {
+  source = "../../modules/pubsub"
+
+  project_id        = var.project_id
+  topic_name        = var.topic_name
+  subscription_name = var.subscription_name
+}

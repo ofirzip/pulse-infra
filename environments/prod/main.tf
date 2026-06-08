@@ -31,3 +31,10 @@ module "bigquery" {
   table_id   = var.bq_table_id
   location   = "US"
 }
+
+module "firestore" {
+  source = "../../modules/firestore"
+
+  project_id  = var.project_id
+  location_id = var.firestore_location
+}
